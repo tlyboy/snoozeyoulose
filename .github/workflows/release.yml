@@ -75,8 +75,9 @@ jobs:
         run: |
           pnpm exec tsc
           pnpm exec vite build
+          # electron-builder 26: mac.notarize 必须是布尔；teamId 由 APPLE_TEAM_ID 环境变量提供
           if [ -n "$APPLE_TEAM_ID" ]; then
-            pnpm exec electron-builder --mac --publish always --config.mac.notarize.teamId=$APPLE_TEAM_ID
+            pnpm exec electron-builder --mac --publish always --config.mac.notarize=true
           else
             pnpm exec electron-builder --mac --publish always
           fi
