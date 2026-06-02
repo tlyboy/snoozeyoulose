@@ -65,8 +65,8 @@ jobs:
           security set-keychain-settings -t 3600 -u build.keychain
           security import $RUNNER_TEMP/certificate.p12 -k build.keychain -P "$APPLE_CERTIFICATE_PASSWORD" -T /usr/bin/codesign
           security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASSWORD" build.keychain
-          CERT_ID=$(security find-identity -v -p codesigning build.keychain | grep "Developer ID Application" | awk -F'"' '{print $2}')
-          echo "CSC_NAME=$CERT_ID" >> $GITHUB_ENV
+          # For diagnostics only; do not set CSC_NAME (a prefixed value causes an error); let electron-builder select the certificate automatically based on CSC_LINK
+          security find-identity -v -p codesigning build.keychain | grep "Developer ID Application" || true
           echo "CSC_LINK=$RUNNER_TEMP/certificate.p12" >> $GITHUB_ENV
           echo "CSC_KEY_PASSWORD=$APPLE_CERTIFICATE_PASSWORD" >> $GITHUB_ENV
 
