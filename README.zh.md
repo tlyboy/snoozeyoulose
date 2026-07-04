@@ -14,7 +14,7 @@
 
 ## 安装
 
-从 [Releases](https://github.com/tlyboys/snoozeyoulose/releases/latest) 下载对应平台的安装包：
+从 [Releases](https://github.com/tlyboy/snoozeyoulose/releases/latest) 下载对应平台的安装包：
 
 - **macOS** —— `SnoozeYouLose-Mac-<版本>-<架构>-Installer.dmg`（Apple 芯片 / Intel），已签名并公证
 - **Windows** —— `SnoozeYouLose-Windows-<版本>-Setup.exe`

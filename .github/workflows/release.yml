@@ -1,6 +1,6 @@
 name: release
 
-# Check out, build, sign, and publish from the private source repository tlyboys/snoozeyoulose to this (public) repository's Releases.
+# Check out, build, sign, and publish from the private source repository tlyboy/snoozeyoulose to this (public) repository's Releases.
 # The public repository can use organization-level Apple signing secrets; electron-updater can also download updates from public releases without a token.
 on:
   workflow_dispatch:
@@ -36,7 +36,7 @@ jobs:
       - name: Checkout private source
         uses: actions/checkout@v4
         with:
-          repository: tlyboys/snoozeyoulose-app
+          repository: tlyboy/snoozeyoulose-app
           ref: ${{ github.event.inputs.ref || 'main' }}
           token: ${{ secrets.SOURCE_TOKEN }}
 
