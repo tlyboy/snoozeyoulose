@@ -14,7 +14,7 @@
 
 ## Install
 
-Download the latest installer for your platform from [Releases](https://github.com/tlyboys/snoozeyoulose/releases/latest):
+Download the latest installer for your platform from [Releases](https://github.com/tlyboy/snoozeyoulose/releases/latest):
 
 - **macOS** — `SnoozeYouLose-Mac-<version>-<arch>-Installer.dmg` (Apple Silicon / Intel), signed & notarized
 - **Windows** — `SnoozeYouLose-Windows-<version>-Setup.exe`
