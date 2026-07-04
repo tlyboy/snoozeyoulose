@@ -1,6 +1,6 @@
 name: release
 
-# 从私有源码仓 tlyboy/snoozeyoulose 检出、构建、签名并发布到本（公开）仓库的 Releases。
+# 从私有源码仓 tlyboy/snoozeyoulose-app 检出、构建、签名并发布到本（公开）仓库的 Releases。
 # 公开仓库可使用组织级 Apple 签名 secrets；electron-updater 也能免 token 从公开 release 拉更新。
 on:
   workflow_dispatch:
@@ -8,9 +8,6 @@ on:
       ref:
         description: '要构建的源码 ref（分支或 tag）'
         default: main
-  push:
-    branches:
-      - release
 
 permissions:
   contents: write
