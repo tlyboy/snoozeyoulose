@@ -1,6 +1,6 @@
 name: release
 
-# Check out, build, sign, and publish from the private source repository tlyboy/snoozeyoulose to this (public) repository's Releases.
+# Check out, build, sign, and publish from the private source repository tlyboy/snoozeyoulose-app to this repository's (public) Releases.
 # The public repository can use organization-level Apple signing secrets; electron-updater can also download updates from public releases without a token.
 on:
   workflow_dispatch:
@@ -8,9 +8,6 @@ on:
       ref:
         description: '要构建的源码 ref（分支或 tag）'
         default: main
-  push:
-    branches:
-      - release
 
 permissions:
   contents: write
