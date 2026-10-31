@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "format": "oxfmt .",
-    "check": "oxfmt --check ."
+    "check": "oxfmt --check .",
+    "format": "oxfmt ."
   },
   "devDependencies": {
     "oxfmt": "0.72.0"
